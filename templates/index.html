@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Vulnerability Dashboard</title>
+</head>
+<body>
+    <h1>System Vulnerabilities Related to Installed Software</h1>
+    <ul>
+        {% for vuln in vulnerabilities %}
+        <li>
+            <strong>{{ vuln.id }}</strong>: {{ vuln.description }}
+            <br>
+            Affected Software: {{ vuln.software }} (Version: {{ vuln.version }})
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
